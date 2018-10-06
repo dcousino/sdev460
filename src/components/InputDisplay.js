@@ -4,14 +4,12 @@ const URL = require('url-parse');
 export default class InputDisplay extends Component {
   clean = userInput => {
     if (!this.props.safe) {
-      console.log(userInput);
       return userInput;
     }
     const url = new URL(userInput);
-    console.log(url);
 
-    if (url.protocol === 'javascript:') return '';
-    if (url.protocol === '') return '';
+    if (url.protocol !== 'HTTP' || url.protocol !== 'HTTPS') return '';
+
     return url.href;
   };
 
