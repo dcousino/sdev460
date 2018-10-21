@@ -67,6 +67,9 @@ class Login extends Component {
                 <Button id="submit" color="danger" onClick={this.test}>
                   Submit
                 </Button>
+                <Button id="submit" color="success" onClick={this.test}>
+                  Submit
+                </Button>
               </Form>
             </CardBody>
           </Card>
